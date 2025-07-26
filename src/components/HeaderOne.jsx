@@ -1122,7 +1122,7 @@ const HeaderOne = () => {
                         {/* Header Right start */}
                         <div className="header-right flex-align">
                             <Link
-                                to="/tel:9768965608"
+                                to="tel:9768965608"
                                 className="bg-main-600 text-white p-12 h-100 hover-bg-main-800 flex-align gap-8 text-lg d-lg-flex d-none"
                             >
                                 <div className="d-flex text-32">

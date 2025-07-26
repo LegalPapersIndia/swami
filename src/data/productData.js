@@ -3,7 +3,7 @@ export const products = [
   {
     id: 1,
     slug: "swami-gauvedam-sambrani",
-    name: "Swami Gauvedam Sambrani Cupdhoop 123",
+    name: "Swami Gauvedam Sambrani Cupdhoop",
     price: 27,
     oldPrice: 38,
     rating: 4.8,
