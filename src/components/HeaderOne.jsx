@@ -124,17 +124,16 @@ const HeaderOne = () => {
 
                             {/* Shop Menu */}
                             <li onClick={() => handleMenuClick(1)}
-                                className={`on-hover-item nav-menu__item has-submenu ${activeIndex === 1 ? "d-block" : ""
-                                    }`}
+                                className="nav-menu__item"
                             >
                                 <Link
-                                    to="#"
+                                    to="/cupdhoop"
                                     className="nav-menu__link"
 
                                 >
-                                    Shop
+                                    Cupdhoop
                                 </Link>
-                                <ul
+                                {/* <ul
                                     className={`on-hover-dropdown common-dropdown nav-submenu scroll-sm ${activeIndex === 1 ? "open" : ""
                                         }`}
                                 >
@@ -168,25 +167,24 @@ const HeaderOne = () => {
                                             Shop Details Two
                                         </Link>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </li>
 
                             {/* Pages Menu */}
                             <li onClick={() => handleMenuClick(2)}
-                                className={`on-hover-item nav-menu__item has-submenu ${activeIndex === 2 ? "d-block" : ""
-                                    }`}
+                                className="nav-menu__item"
                             >
-                                <span className="badge-notification bg-warning-600 text-white text-sm py-2 px-8 rounded-4">
+                                {/* <span className="badge-notification bg-warning-600 text-white text-sm py-2 px-8 rounded-4">
                                     New
-                                </span>
+                                </span> */}
                                 <Link
                                     to="#"
                                     className="nav-menu__link"
 
                                 >
-                                    Pages
+                                    DhoopSticks
                                 </Link>
-                                <ul
+                                {/* <ul
                                     className={`on-hover-dropdown common-dropdown nav-submenu scroll-sm ${activeIndex === 2 ? "open" : ""
                                         }`}
                                 >
@@ -220,22 +218,21 @@ const HeaderOne = () => {
                                             Account
                                         </Link>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </li>
 
                             {/* Blog Menu */}
                             <li onClick={() => handleMenuClick(3)}
-                                className={`on-hover-item nav-menu__item has-submenu ${activeIndex === 3 ? "d-block" : ""
-                                    }`}
+                                className="nav-menu__item"
                             >
                                 <Link
                                     to="#"
                                     className="nav-menu__link"
 
                                 >
-                                    Blog
+                                    Incense Sticks
                                 </Link>
-                                <ul
+                                {/* <ul
                                     className={`on-hover-dropdown common-dropdown nav-submenu scroll-sm ${activeIndex === 3 ? "open" : ""
                                         }`}
                                 >
@@ -259,9 +256,44 @@ const HeaderOne = () => {
                                             Blog Details
                                         </Link>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </li>
-
+                            <li className="nav-menu__item">
+                                <Link
+                                    to="/contact"
+                                    className="nav-menu__link"
+                                    onClick={() => setActiveIndex(null)}
+                                >
+                                    Camphor
+                                </Link>
+                            </li>
+                            <li className="nav-menu__item">
+                                <Link
+                                    to="/contact"
+                                    className="nav-menu__link"
+                                    onClick={() => setActiveIndex(null)}
+                                >
+                                    Attar
+                                </Link>
+                            </li>
+                            <li className="nav-menu__item">
+                                <Link
+                                    to="/contact"
+                                    className="nav-menu__link"
+                                    onClick={() => setActiveIndex(null)}
+                                >
+                                    Swami Gift Boxes
+                                </Link>
+                            </li>
+                            <li className="nav-menu__item">
+                                <Link
+                                    to="/contact"
+                                    className="nav-menu__link"
+                                    onClick={() => setActiveIndex(null)}
+                                >
+                                    Other Products
+                                </Link>
+                            </li>
                             {/* Contact Us Menu */}
                             <li className="nav-menu__item">
                                 <Link
