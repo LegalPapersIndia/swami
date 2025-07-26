@@ -1,0 +1,28 @@
+.flower-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.flower {
+  position: absolute;
+  top: -40px;
+  animation: flower-fall-spin 6s linear forwards;
+  user-select: none;
+}
+
+@keyframes flower-fall-spin {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg); // More spin for visibility
+    opacity: 0;
+  }
+}
