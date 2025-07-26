@@ -119,7 +119,7 @@ const FeatureOne = () => {
                             <div className="feature-item text-center">
                                 <div className="feature-item__thumb rounded-circle">
                                     <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img1.png" alt="" />
+                                        <img src="assets/images/thumbs/flash-sale-img1.png" alt="" />
                                     </Link>
                                 </div>
                                 <div className="feature-item__content mt-16">
@@ -128,13 +128,13 @@ const FeatureOne = () => {
                                             ALL PRODUCTS
                                         </Link>
                                     </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
+                                    <span className="text-sm text-gray-400">65+ Products</span>
                                 </div>
                             </div>
                             <div className="feature-item text-center">
                                 <div className="feature-item__thumb rounded-circle">
                                     <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img1.png" alt="" />
+                                        <img src="assets/images/products/product-img3.png" alt="" />
                                     </Link>
                                 </div>
                                 <div className="feature-item__content mt-16">
@@ -143,13 +143,13 @@ const FeatureOne = () => {
                                             CUPDHOOP
                                         </Link>
                                     </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
+                                    <span className="text-sm text-gray-400">12+ Products</span>
                                 </div>
                             </div>
                             <div className="feature-item text-center">
                                 <div className="feature-item__thumb rounded-circle">
                                     <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img1.png" alt="" />
+                                        <img src="assets/images/products/product-img7.png" alt="" />
                                     </Link>
                                 </div>
                                 <div className="feature-item__content mt-16">
@@ -158,13 +158,13 @@ const FeatureOne = () => {
                                             DHOOPSTICKS
                                         </Link>
                                     </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
+                                    <span className="text-sm text-gray-400">10+ Products</span>
                                 </div>
                             </div>
                             <div className="feature-item text-center">
                                 <div className="feature-item__thumb rounded-circle">
                                     <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img1.png" alt="" />
+                                        <img src="assets/images/products/product-img8.png" alt="" />
                                     </Link>
                                 </div>
                                 <div className="feature-item__content mt-16">
@@ -173,22 +173,22 @@ const FeatureOne = () => {
                                             INCENSE STICKS
                                         </Link>
                                     </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
+                                    <span className="text-sm text-gray-400">14+ Products</span>
                                 </div>
                             </div>
                             <div className="feature-item text-center">
                                 <div className="feature-item__thumb rounded-circle">
                                     <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img1.png" alt="" />
+                                        <img src="assets/images/products/product-img9.png" alt="" />
                                     </Link>
                                 </div>
                                 <div className="feature-item__content mt-16">
                                     <h6 className="text-lg mb-8">
                                         <Link to="/shop" className="text-inherit">
-                                            ATTAR
+                                            CAMPHOR
                                         </Link>
                                     </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
+                                    <span className="text-sm text-gray-400">10+ Products</span>
                                 </div>
                             </div>
                             <div className="feature-item text-center">
@@ -203,13 +203,13 @@ const FeatureOne = () => {
                                             GIFT BOXES
                                         </Link>
                                     </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
+                                    <span className="text-sm text-gray-400">20+ Products</span>
                                 </div>
                             </div>
                             <div className="feature-item text-center">
                                 <div className="feature-item__thumb rounded-circle">
                                     <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img1.png" alt="" />
+                                        <img src="assets/images/products/product-img10.png" alt="" />
                                     </Link>
                                 </div>
                                 <div className="feature-item__content mt-16">
@@ -218,7 +218,7 @@ const FeatureOne = () => {
                                             OTHER PRODUCTS
                                         </Link>
                                     </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
+                                    <span className="text-sm text-gray-400">25+ Products</span>
                                 </div>
                             </div>
                             {/* <div className="feature-item text-center">

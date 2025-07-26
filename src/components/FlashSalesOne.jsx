@@ -136,7 +136,7 @@ const FlashSalesOne = () => {
                                     className="position-absolute inset-block-start-0 inset-inline-start-0 w-100 h-100 object-fit-cover z-n1 flash-sales-item__bg"
                                 />
                                 <div className="flash-sales-item__thumb d-sm-block d-none">
-                                    <img src="assets/images/thumbs/flash-sale-img1.png" alt="" />
+                                    <img src="assets/images/products/product-img8.png" alt="" />
                                 </div>
                                 <div className="flash-sales-item__content ms-sm-auto">
                                     <h6 className="text-28 mb-20">Unlock 25% Discount <br /> on pack of <br /> 4 cupdhoop boxes</h6>
@@ -180,7 +180,7 @@ const FlashSalesOne = () => {
                                     className="position-absolute inset-block-start-0 inset-inline-start-0 w-100 h-100 object-fit-cover z-n1 flash-sales-item__bg"
                                 />
                                 <div className="flash-sales-item__thumb d-sm-block d-none">
-                                    <img src="assets/images/thumbs/flash-sale-img1.png" alt="" />
+                                    <img src="assets/images/products/product-img7.png" alt="" />
                                 </div>
                                 <div className="flash-sales-item__content ms-sm-auto">
                                     <h6 className="text-28 mb-20">Unlock 25% Discount <br /> on pack of <br /> 4 cupdhoop boxes</h6>

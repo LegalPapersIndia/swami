@@ -12,6 +12,8 @@ import AccountPage from "./pages/AccountPage";
 import BlogPage from "./pages/BlogPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import ContactPage from "./pages/ContactPage";
+import LoginPage from "./pages/LoginPage";
+import SignInPage from "./pages/SignInPage";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route exact path="/blog" element={<BlogPage />} />
         <Route exact path="/blog-details" element={<BlogDetailsPage />} />
         <Route exact path="/contact" element={<ContactPage />} />
+        <Route exact path="/login" element={<LoginPage />} />
+        <Route exact path="/sign-in" element={<SignInPage />} />
 
       </Routes>
     </BrowserRouter>

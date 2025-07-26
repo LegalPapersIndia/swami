@@ -802,14 +802,14 @@ const HeaderOne = () => {
                                                 <span className="text-xl d-flex">
                                                     <i class="ph ph-hands-praying" />
                                                 </span>
-                                                <span>Attar</span>
+                                                <span>Camphor</span>
                                                 <span className="icon text-md d-flex ms-auto">
                                                     <i className="ph ph-caret-right" />
                                                 </span>
                                             </Link>
                                             <div className={`submenus-submenu py-16 ${activeIndexCat === 3 ? "open" : ""}`}>
                                                 <h6 className="text-lg px-16 submenus-submenu__title">
-                                                    Attar
+                                                    Camphor
                                                 </h6>
                                                 <ul className="submenus-submenu__list max-h-300 overflow-y-auto scroll-sm">
                                                     <li>
@@ -1052,7 +1052,7 @@ const HeaderOne = () => {
                                         <NavLink to="/contact" className={(navData) =>
                                             navData.isActive ? "nav-menu__link activePage" : "nav-menu__link"
                                         }>
-                                            Attar
+                                            Camphor
                                         </NavLink>
                                     </li>
                                     <li className="on-hover-item nav-menu__item">
@@ -1090,13 +1090,13 @@ const HeaderOne = () => {
                         {/* Header Right start */}
                         <div className="header-right flex-align">
                             <Link
-                                to="/tel:01234567890"
+                                to="/tel:9768965608"
                                 className="bg-main-600 text-white p-12 h-100 hover-bg-main-800 flex-align gap-8 text-lg d-lg-flex d-none"
                             >
                                 <div className="d-flex text-32">
                                     <i className="ph ph-phone-call" />
                                 </div>
-                                01- 234 567 890
+                                976-896-5608
                             </Link>
                             <div className="me-16 d-lg-none d-block">
                                 <div className="flex-align flex-wrap gap-12">
