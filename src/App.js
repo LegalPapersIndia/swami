@@ -35,6 +35,7 @@ function App() {
         <Route exact path="/contact" element={<ContactPage />} />
         <Route exact path="/login" element={<LoginPage />} />
         <Route exact path="/sign-in" element={<SignInPage />} />
+        <Route path="/product/:slug" element={<ProductDetailsPageOne />} />
 
       </Routes>
     </BrowserRouter>

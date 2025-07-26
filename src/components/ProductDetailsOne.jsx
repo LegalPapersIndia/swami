@@ -1,32 +1,70 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from "react-router-dom";
 import Slider from 'react-slick';
 import { getCountdown } from '../helper/Countdown';
+import { products } from "../data/productData";
 
 const ProductDetailsOne = () => {
+
+    // const [timeLeft, setTimeLeft] = useState(getCountdown());
+
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setTimeLeft(getCountdown());
+    //     }, 1000);
+
+    //     return () => clearInterval(interval);
+    // }, []);
+    // const productImages = [
+    //     "assets/images/thumbs/product-details-thumb1.jpg",
+    //     "assets/images/thumbs/product-details-thumb2.png",
+    //     "assets/images/thumbs/product-details-thumb3.png",
+    //     "assets/images/thumbs/product-details-thumb2.png",
+    // ];
+
+    // // increment & decrement
+    // const [quantity, setQuantity] = useState(1);
+    // const incrementQuantity = () => setQuantity(quantity + 1);
+    // const decrementQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : quantity);
+
+
+    // const [mainImage, setMainImage] = useState(productImages[0]);
+
+    // const settingsThumbs = {
+    //     dots: false,
+    //     infinite: true,
+    //     speed: 500,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     focusOnSelect: true,
+    // };
+
+    const { slug } = useParams();
+    const product = products.find((p) => p.slug === slug);
+
     const [timeLeft, setTimeLeft] = useState(getCountdown());
+    const [quantity, setQuantity] = useState(1);
+    const [mainImage, setMainImage] = useState(product ? product.images[0] : "");
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setTimeLeft(getCountdown());
-        }, 1000);
-
+        const interval = setInterval(() => setTimeLeft(getCountdown()), 1000);
         return () => clearInterval(interval);
     }, []);
-    const productImages = [
-        "assets/images/thumbs/product-details-thumb1.png",
-        "assets/images/thumbs/product-details-thumb2.png",
-        "assets/images/thumbs/product-details-thumb3.png",
-        "assets/images/thumbs/product-details-thumb2.png",
-    ];
 
-    // increment & decrement
-    const [quantity, setQuantity] = useState(1);
+    if (!product) {
+        return (
+            <div className="container text-center py-80">
+                <h2>Product Not Found</h2>
+                <Link to="/shop" className="btn btn-main mt-16">
+                    Back to Shop
+                </Link>
+            </div>
+        );
+    }
+
     const incrementQuantity = () => setQuantity(quantity + 1);
-    const decrementQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : quantity);
-
-
-    const [mainImage, setMainImage] = useState(productImages[0]);
+    const decrementQuantity = () =>
+        setQuantity(quantity > 1 ? quantity - 1 : quantity);
 
     const settingsThumbs = {
         dots: false,
@@ -34,8 +72,9 @@ const ProductDetailsOne = () => {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
-        focusOnSelect: true,
+        focusOnSelect: true
     };
+
     return (
         <section className="product-details py-80">
             <div className="container container-lg">
@@ -54,9 +93,9 @@ const ProductDetailsOne = () => {
                                     <div className="mt-24">
                                         <div className="product-details__images-slider">
                                             <Slider {...settingsThumbs}>
-                                                {productImages.map((image, index) => (
+                                                {product.images.map((image, index) => (
                                                     <div className="center max-w-120 max-h-120 h-100 flex-center border border-gray-100 rounded-16 p-8" key={index} onClick={() => setMainImage(image)}>
-                                                        <img className='thum' src={image} alt={`Thumbnail ${index}`} />
+                                                        <img className='thum' src={image} alt={`Thumbnail ₹{index}`} />
                                                     </div>
                                                 ))}
                                             </Slider>
@@ -69,7 +108,7 @@ const ProductDetailsOne = () => {
                             </div>
                             <div className="col-xl-6">
                                 <div className="product-details__content">
-                                    <h5 className="mb-12">Lay's Potato Chips Onion Flavored</h5>
+                                    <h5 className="mb-12">{product.name}</h5>
                                     <div className="flex-align flex-wrap gap-12">
                                         <div className="flex-align gap-12 flex-wrap">
                                             <div className="flex-align gap-8">
@@ -90,28 +129,26 @@ const ProductDetailsOne = () => {
                                                 </span>
                                             </div>
                                             <span className="text-sm fw-medium text-neutral-600">
-                                                4.7 Star Rating
+                                                {product.rating} Star Rating
                                             </span>
                                             <span className="text-sm fw-medium text-gray-500">
-                                                (21,671)
+                                                ({product.reviewsCount})
                                             </span>
                                         </div>
-                                        <span className="text-sm fw-medium text-gray-500">|</span>
+                                        {/* <span className="text-sm fw-medium text-gray-500">|</span>
                                         <span className="text-gray-900">
                                             {" "}
                                             <span className="text-gray-400">SKU:</span>EB4DRP{" "}
-                                        </span>
+                                        </span> */}
                                     </div>
                                     <span className="mt-32 pt-32 text-gray-700 border-top border-gray-100 d-block" />
                                     <p className="text-gray-700">
-                                        Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus
-                                        malesuada tincidunt. Class aptent taciti sociosqu ad litora
-                                        torquent
+                                        {product.description1}
                                     </p>
                                     <div className="mt-32 flex-align flex-wrap gap-32">
                                         <div className="flex-align gap-8">
-                                            <h4 className="mb-0">$25.00</h4>
-                                            <span className="text-md text-gray-500">$38.00</span>
+                                            <h4 className="mb-0">₹{product.price}</h4>
+                                            <span className="text-md text-gray-500">₹{product.oldPrice}.00</span>
                                         </div>
                                         <Link to="#" className="btn btn-main rounded-pill">
                                             Order on What'sApp
@@ -165,7 +202,7 @@ const ProductDetailsOne = () => {
                                             />
                                         </div>
                                         <span className="text-sm text-gray-700 mt-8">
-                                            Available only:45
+                                            Available only: {product.available}
                                         </span>
                                     </div>
                                     <span className="text-gray-900 d-block mb-8">Quantity:</span>
@@ -229,7 +266,7 @@ const ProductDetailsOne = () => {
                                                 <i className="ph ph-plus" />
                                             </button>
                                             <span className="text-gray-900 fw-medium text-xs">
-                                                Mfr. coupon. $3.00 off 5
+                                                Mfr. coupon. ₹3.00 off 5
                                             </span>
                                         </div>
                                         <Link
@@ -239,14 +276,11 @@ const ProductDetailsOne = () => {
                                             View Details
                                         </Link>
                                     </div>
-                                    <ul className="list-inside ms-12">
+                                    {/* <ul className="list-inside ms-12">
                                         <li className="text-gray-900 text-sm mb-8">
                                             Buy 1, Get 1 FREE
                                         </li>
-                                        <li className="text-gray-900 text-sm mb-0">
-                                            Buy 1, Get 1 FREE
-                                        </li>
-                                    </ul>
+                                    </ul> */}
                                 </div>
                             </div>
                         </div>
@@ -259,7 +293,7 @@ const ProductDetailsOne = () => {
                                         <span className="w-44 h-44 bg-white rounded-circle flex-center text-2xl">
                                             <i className="ph ph-storefront" />
                                         </span>
-                                        <span className="text-white">by Marketpro</span>
+                                        <span className="text-white">by Swami</span>
                                     </div>
                                     <Link
                                         to="/shop"
@@ -312,7 +346,7 @@ const ProductDetailsOne = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="p-24 bg-color-one d-flex align-items-start gap-24 border-bottom border-gray-100">
+                            {/* <div className="p-24 bg-color-one d-flex align-items-start gap-24 border-bottom border-gray-100">
                                 <span className="w-44 h-44 bg-white text-main-600 rounded-circle flex-center text-2xl flex-shrink-0">
                                     <i className="ph-fill ph-check-circle" />
                                 </span>
@@ -323,7 +357,7 @@ const ProductDetailsOne = () => {
                                         this product of proper quality.
                                     </p>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="p-24 bg-color-one d-flex align-items-start gap-24 border-bottom border-gray-100">
                                 <span className="w-44 h-44 bg-white text-main-600 rounded-circle flex-center text-2xl flex-shrink-0">
                                     <i className="ph-fill ph-package" />
@@ -396,12 +430,9 @@ const ProductDetailsOne = () => {
                                     <div className="mb-40">
                                         <h6 className="mb-24">Product Description</h6>
                                         <p>
-                                            Wherever celebrations and good times happen, the LAY'S brand
-                                            will be there just as it has been for more than 75 years. With
-                                            flavors almost as rich as our history, we have a chip or crisp
-                                            flavor guaranteed to bring a smile on your face.{" "}
+                                            {product.description2}{" "}
                                         </p>
-                                        <p>
+                                        {/* <p>
                                             Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat
                                             auctor, eleifend nunc a, lobortis neque. Praesent aliquam
                                             dignissim viverra. Maecenas lacus odio, feugiat eu nunc sit
@@ -412,99 +443,35 @@ const ProductDetailsOne = () => {
                                             ipsum in vestibulum vulputate, lorem orci convallis quam, sit
                                             amet consequat nulla felis pharetra lacus. Duis semper erat
                                             mauris, sed egestas purus commodo vel.
-                                        </p>
+                                        </p> */}
                                         <ul className="list-inside mt-32 ms-16">
-                                            <li className="text-gray-400 mb-4">
-                                                8.0 oz. bag of LAY'S Classic Potato Chips
-                                            </li>
-                                            <li className="text-gray-400 mb-4">
-                                                Tasty LAY's potato chips are a great snack
-                                            </li>
-                                            <li className="text-gray-400 mb-4">
-                                                Includes three ingredients: potatoes, oil, and salt
-                                            </li>
-                                            <li className="text-gray-400 mb-4">Gluten free product</li>
+                                            {product.bulletPoints.map((point, i) => (
+                                                <li className="text-gray-400 mb-4" key={i}>{point}</li>
+                                            ))}
                                         </ul>
-                                        <ul className="mt-32">
+                                        {/* <ul className="mt-32">
                                             <li className="text-gray-400 mb-4">Made in USA</li>
                                             <li className="text-gray-400 mb-4">Ready To Eat.</li>
-                                        </ul>
+                                        </ul> */}
                                     </div>
                                     <div className="mb-40">
                                         <h6 className="mb-24">Product Specifications</h6>
                                         <ul className="mt-32">
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-heading fw-medium">
-                                                    Product Type:
-                                                    <span className="text-gray-500"> Chips &amp; Dips</span>
-                                                </span>
-                                            </li>
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-heading fw-medium">
-                                                    Product Name:
-                                                    <span className="text-gray-500">
-                                                        {" "}
-                                                        Potato Chips Classic{" "}
-                                                    </span>
-                                                </span>
-                                            </li>
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-heading fw-medium">
-                                                    Brand:
-                                                    <span className="text-gray-500"> Lay's</span>
-                                                </span>
-                                            </li>
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-heading fw-medium">
-                                                    FSA Eligible:
-                                                    <span className="text-gray-500"> No</span>
-                                                </span>
-                                            </li>
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-heading fw-medium">
-                                                    Size/Count:
-                                                    <span className="text-gray-500"> 8.0oz</span>
-                                                </span>
-                                            </li>
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-heading fw-medium">
-                                                    Item Code:
-                                                    <span className="text-gray-500"> 331539</span>
-                                                </span>
-                                            </li>
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-heading fw-medium">
-                                                    Ingredients:
-                                                    <span className="text-gray-500">
-                                                        {" "}
-                                                        Potatoes, Vegetable Oil, and Salt.
-                                                    </span>
-                                                </span>
-                                            </li>
+                                            {product.specifications.map((spec, i) => (
+                                                <li className="text-gray-400 mb-14 flex-align gap-14" 
+                                                    key={i}>
+                                                        <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
+                                                            <i className="ph ph-check" />
+                                                        </span>
+                                                        <span className="text-heading fw-medium">
+                                                            {spec.label}: {" "}
+                                                            <span className="text-gray-500"> {spec.value}</span>
+                                                        </span>
+                                                </li>
+                                            ))}
                                         </ul>
                                     </div>
-                                    <div className="mb-40">
+                                    {/* <div className="mb-40">
                                         <h6 className="mb-24">Nutrition Facts</h6>
                                         <ul className="mt-32">
                                             <li className="text-gray-400 mb-14 flex-align gap-14">
@@ -553,7 +520,7 @@ const ProductDetailsOne = () => {
                                                 </span>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div> */}
                                     <div className="mb-0">
                                         <h6 className="mb-24">More Details</h6>
                                         <ul className="mt-32">

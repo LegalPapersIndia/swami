@@ -43,7 +43,7 @@ const ProductDetailsPageOne = () => {
       <ShippingOne />
 
       {/* NewsletterOne */}
-      <NewsletterOne />
+      {/* <NewsletterOne /> */}
 
       {/* FooterTwo */}
       <FooterOne />
