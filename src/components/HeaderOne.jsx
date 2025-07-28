@@ -104,7 +104,7 @@ const HeaderOne = () => {
                 </button>
                 <div className="mobile-menu__inner">
                     <Link to="/" className="mobile-menu__logo">
-                        <img src="assets/images/logo/logo.png" alt="Logo" />
+                        <img src="/assets/images/logo/logo.png" alt="Logo" />
                     </Link>
                     <div className="mobile-menu__menu">
                         {/* Nav Menu Start */}
@@ -640,7 +640,7 @@ const HeaderOne = () => {
 
                         <div className="logo">
                             <Link to="/" className="link">
-                                <img src="assets/images/logo/logo.png" alt="Logo" />
+                                <img src="/assets/images/logo/logo.png" alt="Logo" />
                             </Link>
                         </div>
                         {/* form location start */}

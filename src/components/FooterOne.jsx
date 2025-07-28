@@ -15,7 +15,7 @@ const FooterOne = () => {
                         <div className="footer-item__logo">
                             <Link to="/">
                                 {" "}
-                                <img src="assets/images/logo/logo.png" alt="" />
+                                <img src="/assets/images/logo/logo.png" alt="" />
                             </Link>
                         </div>
                         <p className="mb-24">
@@ -230,7 +230,7 @@ const FooterOne = () => {
                                     to="https://twitter.com/share?url=https://dhruviincenseindia.com/"
                                     className="w-44 h-44 flex-center bg-main-100 text-main-600 text-xl rounded-circle hover-bg-main-600 hover-text-white"
                                 >
-                                    <i className="ph-fill ph-twitter-logo" />
+                                    <i className="ph-fill ph-x-logo" />
                                 </Link>
                             </li>
                             <li>

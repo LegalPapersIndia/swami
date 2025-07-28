@@ -432,131 +432,44 @@ const ProductDetailsOne = () => {
                                         <p>
                                             {product.description2}{" "}
                                         </p>
-                                        {/* <p>
-                                            Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat
-                                            auctor, eleifend nunc a, lobortis neque. Praesent aliquam
-                                            dignissim viverra. Maecenas lacus odio, feugiat eu nunc sit
-                                            amet, maximus sagittis dolor. Vivamus nisi sapien, elementum
-                                            sit amet eros sit amet, ultricies cursus ipsum. Sed consequat
-                                            luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel
-                                            diam ut arcu pharetra dignissim ut sed leo. Vivamus faucibus,
-                                            ipsum in vestibulum vulputate, lorem orci convallis quam, sit
-                                            amet consequat nulla felis pharetra lacus. Duis semper erat
-                                            mauris, sed egestas purus commodo vel.
-                                        </p> */}
                                         <ul className="list-inside mt-32 ms-16">
                                             {product.bulletPoints.map((point, i) => (
                                                 <li className="text-gray-400 mb-4" key={i}>{point}</li>
                                             ))}
                                         </ul>
-                                        {/* <ul className="mt-32">
-                                            <li className="text-gray-400 mb-4">Made in USA</li>
-                                            <li className="text-gray-400 mb-4">Ready To Eat.</li>
-                                        </ul> */}
                                     </div>
                                     <div className="mb-40">
                                         <h6 className="mb-24">Product Specifications</h6>
                                         <ul className="mt-32">
                                             {product.specifications.map((spec, i) => (
-                                                <li className="text-gray-400 mb-14 flex-align gap-14" 
+                                                <li className="text-gray-400 mb-14 flex-align gap-14"
                                                     key={i}>
-                                                        <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                            <i className="ph ph-check" />
-                                                        </span>
-                                                        <span className="text-heading fw-medium">
-                                                            {spec.label}: {" "}
-                                                            <span className="text-gray-500"> {spec.value}</span>
-                                                        </span>
+                                                    <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
+                                                        <i className="ph ph-check" />
+                                                    </span>
+                                                    <span className="text-heading fw-medium">
+                                                        {spec.label}: {" "}
+                                                        <span className="text-gray-500"> {spec.value}</span>
+                                                    </span>
                                                 </li>
                                             ))}
                                         </ul>
                                     </div>
-                                    {/* <div className="mb-40">
-                                        <h6 className="mb-24">Nutrition Facts</h6>
-                                        <ul className="mt-32">
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-heading fw-medium">
-                                                    {" "}
-                                                    Total Fat 10g 13%
-                                                </span>
-                                            </li>
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-heading fw-medium">
-                                                    {" "}
-                                                    Saturated Fat 1.5g 7%
-                                                </span>
-                                            </li>
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-heading fw-medium">
-                                                    {" "}
-                                                    Cholesterol 0mg 0%
-                                                </span>
-                                            </li>
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-heading fw-medium">
-                                                    {" "}
-                                                    Sodium 170mg 7%
-                                                </span>
-                                            </li>
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-heading fw-medium">
-                                                    {" "}
-                                                    Potassium 350mg 6%
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div> */}
                                     <div className="mb-0">
                                         <h6 className="mb-24">More Details</h6>
                                         <ul className="mt-32">
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-gray-500">
-                                                    {" "}
-                                                    Lunarlon midsole delivers ultra-plush responsiveness
-                                                </span>
-                                            </li>
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-gray-500">
-                                                    {" "}
-                                                    Encapsulated Air-Sole heel unit for lightweight cushioning
-                                                </span>
-                                            </li>
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-gray-500">
-                                                    {" "}
-                                                    Colour Shown: Ale Brown/Black/Goldtone/Ale Brown
-                                                </span>
-                                            </li>
-                                            <li className="text-gray-400 mb-14 flex-align gap-14">
-                                                <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
-                                                    <i className="ph ph-check" />
-                                                </span>
-                                                <span className="text-gray-500"> Style: 805899-202</span>
-                                            </li>
+                                            {product.moreDetails.map((detail, i) => (
+                                                <li className="text-gray-400 mb-14 flex-align gap-14"
+                                                    key={i}>
+                                                    <span className="w-20 h-20 bg-main-50 text-main-600 text-xs flex-center rounded-circle">
+                                                        <i className="ph ph-check" />
+                                                    </span>
+                                                    <span className="text-gray-500">
+                                                        {" "}
+                                                        {detail}
+                                                    </span>
+                                                </li>
+                                            ))}
                                         </ul>
                                     </div>
                                 </div>
@@ -569,113 +482,53 @@ const ProductDetailsOne = () => {
                                 >
                                     <div className="row g-4">
                                         <div className="col-lg-6">
-                                            <h6 className="mb-24">Product Description</h6>
-                                            <div className="d-flex align-items-start gap-24 pb-44 border-bottom border-gray-100 mb-44">
-                                                <img
-                                                    src="assets/images/thumbs/comment-img1.png"
-                                                    alt=""
-                                                    className="w-52 h-52 object-fit-cover rounded-circle flex-shrink-0"
-                                                />
-                                                <div className="flex-grow-1">
-                                                    <div className="flex-between align-items-start gap-8 ">
-                                                        <div className="">
-                                                            <h6 className="mb-12 text-md">Nicolas cage</h6>
-                                                            <div className="flex-align gap-8">
-                                                                <span className="text-15 fw-medium text-warning-600 d-flex">
-                                                                    <i className="ph-fill ph-star" />
-                                                                </span>
-                                                                <span className="text-15 fw-medium text-warning-600 d-flex">
-                                                                    <i className="ph-fill ph-star" />
-                                                                </span>
-                                                                <span className="text-15 fw-medium text-warning-600 d-flex">
-                                                                    <i className="ph-fill ph-star" />
-                                                                </span>
-                                                                <span className="text-15 fw-medium text-warning-600 d-flex">
-                                                                    <i className="ph-fill ph-star" />
-                                                                </span>
-                                                                <span className="text-15 fw-medium text-warning-600 d-flex">
-                                                                    <i className="ph-fill ph-star" />
-                                                                </span>
+                                            <h6 className="mb-24">Product Reviews</h6>
+                                            {product.reviews.map((rev, i) => (
+                                                <div className="d-flex align-items-start gap-24 pb-44 border-bottom border-gray-100 mb-44" key={i}>
+                                                    <img
+                                                        src={rev.avatar}
+                                                        alt={rev.user}
+                                                        className="w-52 h-52 object-fit-cover rounded-circle flex-shrink-0" />
+                                                    <div className="flex-grow-1">
+                                                        <div className="flex-between align-items-start gap-8 ">
+                                                            <div className="">
+                                                                <h6 className="mb-12 text-md">{rev.user}</h6>
+                                                                <div className="flex-align gap-8">
+                                                                    {Array.from({ length: 5 }, (_, index) => (
+                                                                        <span
+                                                                            key={index}
+                                                                            className="text-15 fw-medium d-flex"
+                                                                            style={{ color: index < rev.rating ? "#f59e0b" : "#d1d5db" }} // yellow for filled, gray for empty
+                                                                        >
+                                                                            <i className="ph-fill ph-star" />
+                                                                        </span>
+                                                                    ))}
+                                                                </div>
                                                             </div>
+                                                            <span className="text-gray-800 text-xs">
+                                                                {rev.date}
+                                                            </span>
                                                         </div>
-                                                        <span className="text-gray-800 text-xs">
-                                                            3 Days ago
-                                                        </span>
-                                                    </div>
-                                                    <h6 className="mb-14 text-md mt-24">Greate Product</h6>
-                                                    <p className="text-gray-700">
-                                                        There are many variations of passages of Lorem Ipsum
-                                                        available, but the majority have suffered alteration in
-                                                        some form, by injected humour
-                                                    </p>
-                                                    <div className="flex-align gap-20 mt-44">
-                                                        <button className="flex-align gap-12 text-gray-700 hover-text-main-600">
-                                                            <i className="ph-bold ph-thumbs-up" />
-                                                            Like
-                                                        </button>
-                                                        <Link
-                                                            to="#comment-form"
-                                                            className="flex-align gap-12 text-gray-700 hover-text-main-600"
-                                                        >
-                                                            <i className="ph-bold ph-arrow-bend-up-left" />
-                                                            Replay
-                                                        </Link>
+                                                        <h6 className="mb-14 text-md mt-24">{rev.title}</h6>
+                                                        <p className="text-gray-700">
+                                                            {rev.content}
+                                                        </p>
+                                                        <div className="flex-align gap-20 mt-44">
+                                                            <button className="flex-align gap-12 text-gray-700 hover-text-main-600">
+                                                                <i className="ph-bold ph-thumbs-up" />
+                                                                Like
+                                                            </button>
+                                                            <Link
+                                                                to="#comment-form"
+                                                                className="flex-align gap-12 text-gray-700 hover-text-main-600"
+                                                            >
+                                                                <i className="ph-bold ph-arrow-bend-up-left" />
+                                                                Reply
+                                                            </Link>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="d-flex align-items-start gap-24">
-                                                <img
-                                                    src="assets/images/thumbs/comment-img1.png"
-                                                    alt=""
-                                                    className="w-52 h-52 object-fit-cover rounded-circle flex-shrink-0"
-                                                />
-                                                <div className="flex-grow-1">
-                                                    <div className="flex-between align-items-start gap-8 ">
-                                                        <div className="">
-                                                            <h6 className="mb-12 text-md">Nicolas cage</h6>
-                                                            <div className="flex-align gap-8">
-                                                                <span className="text-15 fw-medium text-warning-600 d-flex">
-                                                                    <i className="ph-fill ph-star" />
-                                                                </span>
-                                                                <span className="text-15 fw-medium text-warning-600 d-flex">
-                                                                    <i className="ph-fill ph-star" />
-                                                                </span>
-                                                                <span className="text-15 fw-medium text-warning-600 d-flex">
-                                                                    <i className="ph-fill ph-star" />
-                                                                </span>
-                                                                <span className="text-15 fw-medium text-warning-600 d-flex">
-                                                                    <i className="ph-fill ph-star" />
-                                                                </span>
-                                                                <span className="text-15 fw-medium text-warning-600 d-flex">
-                                                                    <i className="ph-fill ph-star" />
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <span className="text-gray-800 text-xs">
-                                                            3 Days ago
-                                                        </span>
-                                                    </div>
-                                                    <h6 className="mb-14 text-md mt-24">Greate Product</h6>
-                                                    <p className="text-gray-700">
-                                                        There are many variations of passages of Lorem Ipsum
-                                                        available, but the majority have suffered alteration in
-                                                        some form, by injected humour
-                                                    </p>
-                                                    <div className="flex-align gap-20 mt-44">
-                                                        <button className="flex-align gap-12 text-gray-700 hover-text-main-600">
-                                                            <i className="ph-bold ph-thumbs-up" />
-                                                            Like
-                                                        </button>
-                                                        <Link
-                                                            to="#comment-form"
-                                                            className="flex-align gap-12 text-gray-700 hover-text-main-600"
-                                                        >
-                                                            <i className="ph-bold ph-arrow-bend-up-left" />
-                                                            Replay
-                                                        </Link>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            ))}
                                             <div className="mt-56">
                                                 <div className="">
                                                     <h6 className="mb-24">Write a Review</h6>
@@ -743,10 +596,10 @@ const ProductDetailsOne = () => {
                                         </div>
                                         <div className="col-lg-6">
                                             <div className="ms-xxl-5">
-                                                <h6 className="mb-24">Customers Feedback</h6>
+                                                <h6 className="mb-24">Customers Feedbacks</h6>
                                                 <div className="d-flex flex-wrap gap-44">
                                                     <div className="border border-gray-100 rounded-8 px-40 py-52 flex-center flex-column flex-shrink-0 text-center">
-                                                        <h2 className="mb-6 text-main-600">4.8</h2>
+                                                        <h2 className="mb-6 text-main-600">{product.ratingSummary.average}</h2>
                                                         <div className="flex-center gap-8">
                                                             <span className="text-15 fw-medium text-warning-600 d-flex">
                                                                 <i className="ph-fill ph-star" />
@@ -761,14 +614,14 @@ const ProductDetailsOne = () => {
                                                                 <i className="ph-fill ph-star" />
                                                             </span>
                                                             <span className="text-15 fw-medium text-warning-600 d-flex">
-                                                                <i className="ph-fill ph-star" />
+                                                                <i className="ph-fill ph-star-half" />
                                                             </span>
                                                         </div>
                                                         <span className="mt-16 text-gray-500">
                                                             Average Product Rating
                                                         </span>
                                                     </div>
-                                                    <div className="border border-gray-100 rounded-8 px-24 py-40 flex-grow-1">
+                                                    {/* <div className="border border-gray-100 rounded-8 px-24 py-40 flex-grow-1">
                                                         <div className="flex-align gap-8 mb-20">
                                                             <span className="text-gray-900 flex-shrink-0">5</span>
                                                             <div
@@ -945,6 +798,44 @@ const ProductDetailsOne = () => {
                                                             </div>
                                                             <span className="text-gray-900 flex-shrink-0">2</span>
                                                         </div>
+                                                    </div> */}
+                                                    <div className="border border-gray-100 rounded-8 px-24 py-40 flex-grow-1">
+                                                        {product.ratingSummary.breakdown.map((item, index) => (
+                                                            <div key={index} className="flex-align gap-8 mb-20">
+                                                                {/* Star Label (e.g., 5) */}
+                                                                <span className="text-gray-900 flex-shrink-0">{item.stars}</span>
+
+                                                                {/* Progress Bar */}
+                                                                <div
+                                                                    className="progress w-100 bg-gray-100 rounded-pill h-8"
+                                                                    role="progressbar"
+                                                                    aria-valuenow={item.percent}
+                                                                    aria-valuemin={0}
+                                                                    aria-valuemax={100}
+                                                                >
+                                                                    <div
+                                                                        className="progress-bar bg-main-600 rounded-pill"
+                                                                        style={{ width: `${item.percent}%` }}
+                                                                    />
+                                                                </div>
+
+                                                                {/* Stars Icons */}
+                                                                <div className="flex-align gap-4">
+                                                                    {Array.from({ length: 5 }, (_, i) => (
+                                                                        <span
+                                                                            key={i}
+                                                                            className={`text-xs fw-medium ${i < item.stars ? "text-warning-600" : "text-gray-300"
+                                                                                } d-flex`}
+                                                                        >
+                                                                            <i className="ph-fill ph-star" />
+                                                                        </span>
+                                                                    ))}
+                                                                </div>
+
+                                                                {/* Count */}
+                                                                <span className="text-gray-900 flex-shrink-0">{item.count}</span>
+                                                            </div>
+                                                        ))}
                                                     </div>
                                                 </div>
                                             </div>

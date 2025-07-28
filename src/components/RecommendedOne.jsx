@@ -120,14 +120,14 @@ const RecommendedOne = () => {
                             <div className="col-xxl-2 col-lg-3 col-sm-4 col-6">
                                 <div className="product-card h-100 p-8 border border-gray-100 hover-border-main-600 rounded-16 position-relative transition-2">
                                     <Link
-                                        to="/product-details"
+                                        to="/product/swami-gauvedam-sambrani"
                                         className="product-card__thumb flex-center"
                                     >
                                         <img src="assets/images/products/product-img1.png" alt="" />
                                     </Link>
                                     <div className="product-card__content p-sm-2">
                                         <h6 className="title text-lg fw-semibold mt-12 mb-8">
-                                            <Link to="/product-details" className="link text-line-2">
+                                            <Link to="/product/swami-gauvedam-sambrani" className="link text-line-2">
                                                 SWAMI GAUVEDAM SAMBRANI CUPDHOOP (Pack of 4)
                                             </Link>
                                         </h6>
@@ -172,14 +172,14 @@ const RecommendedOne = () => {
                                         Sale 50%
                                     </span> */}
                                     <Link
-                                        to="/product-details"
+                                        to="/product/swami-premium-sambrani-cupdhoop"
                                         className="product-card__thumb flex-center"
                                     >
                                         <img src="assets/images/products/product-img3.png" alt="" />
                                     </Link>
                                     <div className="product-card__content p-sm-2">
                                         <h6 className="title text-lg fw-semibold mt-12 mb-8">
-                                            <Link to="/product-details" className="link text-line-2">
+                                            <Link to="/product/swami-premium-sambrani-cupdhoop" className="link text-line-2">
                                                 SWAMI PREMIUM SAMBRANI CUPDHOOP (Pack of 4)
                                             </Link>
                                         </h6>
@@ -224,14 +224,14 @@ const RecommendedOne = () => {
                                         Sale 50%
                                     </span> */}
                                     <Link
-                                        to="/product-details"
+                                        to="/product/swami-pavitra-havan-samagri-cupdhoop"
                                         className="product-card__thumb flex-center"
                                     >
                                         <img src="assets/images/products/product-img4.png" alt="" />
                                     </Link>
                                     <div className="product-card__content p-sm-2">
                                         <h6 className="title text-lg fw-semibold mt-12 mb-8">
-                                            <Link to="/product-details" className="link text-line-2">
+                                            <Link to="/product/swami-pavitra-havan-samagri-cupdhoop" className="link text-line-2">
                                                 SWAMI PAVITRA HAVAN SAMAGRI CUPDHOOP (Pack of 4)
                                             </Link>
                                         </h6>
